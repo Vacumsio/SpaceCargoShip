@@ -11,10 +11,5 @@ namespace GameLogic.Commands
             Core.Turns.NextTurn();
             return true;
         }
-
-        internal void Execute(object сore)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
