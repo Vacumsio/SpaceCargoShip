@@ -1,8 +1,16 @@
-﻿namespace GameLogic
+﻿using GameLogic.Architecture;
+
+namespace GameLogic
 {
     public class Core
     {
         public static void Main() { }
-        public Core() { }
+
+        public readonly Ship Ship = new Ship();
+
+        public Core()
+        {
+            Ship.CreateEmptyRooms();
+        }
     }
 }
