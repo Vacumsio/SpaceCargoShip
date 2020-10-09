@@ -3,6 +3,8 @@
     public enum BuildingType
     {
         Empty,
-        PowerPlant
+        PowerPlant,
+        Smeltery,
+        Roboport
     }
 }

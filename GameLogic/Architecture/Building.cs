@@ -9,6 +9,7 @@ namespace GameLogic.Architecture
         public readonly int ModulesLimit = 10;
 
         public readonly BuildingType Type;
+        public readonly BuildingConfig Config;
 
         // Каждый модуль может иметь свою сообтвенную позицию
         private readonly Dictionary<int, Module> modules = new Dictionary<int, Module>();
@@ -16,6 +17,14 @@ namespace GameLogic.Architecture
         public IEnumerable<Module> Modules
         {
             get { return modules.Values; }
+        }
+
+        // В конструкторе принимаем конфиг, а не индекс
+        public Building(BuildingConfig config)
+        {
+            Type = config.Type;
+            ModulesLimit = config.ModulesLimit;
+            Config = config;
         }
 
         public Building(BuildingType type)

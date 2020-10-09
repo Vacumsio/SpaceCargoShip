@@ -7,10 +7,13 @@ namespace GameLogic
         public static void Main() { }
 
         public readonly Ship Ship = new Ship();
+        public readonly Factory Factory = new Factory();
+        public readonly Turns Turns = new Turns();
 
         public Core()
         {
-            Ship.CreateEmptyRooms();
+            // В аргумент метода передаем фабрику
+            Ship.CreateEmptyRooms(Factory);
         }
     }
 }
