@@ -20,8 +20,14 @@ namespace GameLogic.Commands
             {
                 return false;
             }
+
             // Нельзя строить пустую комнату
             if (Building.Type == BuildingType.Empty)
+            {
+                return false;
+            }
+
+            if (!new Pay(Building.Config.ConstructionCost).Execute(Core).IsValid)
             {
                 return false;
             }

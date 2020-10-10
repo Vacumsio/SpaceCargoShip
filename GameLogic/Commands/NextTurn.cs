@@ -6,8 +6,8 @@ namespace GameLogic.Commands
     {
         protected override bool Run()
         {
-            // Именно тут будет вся логика хода
-
+            new CycleProgress().Execute(Core);
+            new ConstructionProgress().Execute(Core);
             Core.Turns.NextTurn();
             return true;
         }

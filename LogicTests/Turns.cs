@@ -23,6 +23,4 @@ namespace LogicTests
             Assert.AreEqual(4, core.Turns.CurrentTurn);
         }
     }
-
-
 }

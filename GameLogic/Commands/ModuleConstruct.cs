@@ -38,6 +38,16 @@ namespace GameLogic.Commands
                 return false;
             }
 
+            if (!Building.Constructible.IsReady)
+            {
+                return false;
+            }
+
+            if (!new Pay(Module.Config.ConstructionCost).Execute(Core).IsValid)
+            {
+                return false;
+            }
+
             Building.SetModule(Position, Module);
             return true;
         }
